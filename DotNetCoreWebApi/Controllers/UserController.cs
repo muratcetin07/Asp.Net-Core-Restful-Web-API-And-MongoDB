@@ -1,4 +1,5 @@
-﻿using Data.Core;
+﻿using Data.Abstract;
+using Data.Core;
 using Data.Repos;
 using Microsoft.AspNetCore.Mvc;
 using Model;
@@ -11,11 +12,11 @@ namespace DotNetCoreWebApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        UserDataRepo _userDataRepo;
+        IData<User> _userDataRepo;
 
-        public UserController()
+        public UserController(IData<User> userDataRepo)
         {
-            _userDataRepo = new UserDataRepo();
+            _userDataRepo = userDataRepo;
         }
 
 

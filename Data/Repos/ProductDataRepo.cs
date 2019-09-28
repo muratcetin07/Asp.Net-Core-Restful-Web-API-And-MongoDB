@@ -1,4 +1,5 @@
-﻿using Data.Concrete;
+﻿using Data.Abstract;
+using Data.Concrete;
 using Model;
 using System;
 using System.Collections.Generic;

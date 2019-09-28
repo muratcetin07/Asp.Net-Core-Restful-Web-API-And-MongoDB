@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data.Abstract;
 using Data.Core;
 using Data.Repos;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,11 @@ namespace DotNetCoreWebApi.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        ProductDataRepo _productDataRepo;
+        IData<Product> _productDataRepo;
 
-        public ProductController()
+        public ProductController(IData<Product> productDataRepo)
         {
-            _productDataRepo = new ProductDataRepo();
+            _productDataRepo = productDataRepo;
         }
 
         [HttpGet]
