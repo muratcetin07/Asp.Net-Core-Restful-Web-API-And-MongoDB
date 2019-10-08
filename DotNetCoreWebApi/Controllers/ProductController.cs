@@ -14,9 +14,9 @@ namespace DotNetCoreWebApi.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        IData<Product> _productDataRepo;
+        IProductDataRepo _productDataRepo;
 
-        public ProductController(IData<Product> productDataRepo)
+        public ProductController(IProductDataRepo productDataRepo)
         {
             _productDataRepo = productDataRepo;
         }

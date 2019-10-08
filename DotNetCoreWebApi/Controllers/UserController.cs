@@ -12,9 +12,9 @@ namespace DotNetCoreWebApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        IData<User> _userDataRepo;
+        IUserDataRepo _userDataRepo;
 
-        public UserController(IData<User> userDataRepo)
+        public UserController(IUserDataRepo userDataRepo)
         {
             _userDataRepo = userDataRepo;
         }

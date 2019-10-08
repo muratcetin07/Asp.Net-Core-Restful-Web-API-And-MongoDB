@@ -1,4 +1,5 @@
-﻿using Data.Concrete;
+﻿using Data.Abstract;
+using Data.Concrete;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using Utilities;
 
 namespace Data.Repos
 {
-    public class UserDataRepo : EntityBaseMongoData<User>
+    public class UserDataRepo : EntityBaseMongoData<User>, IUserDataRepo 
     {
         public UserDataRepo() : base(MongoTableName.User)
         {

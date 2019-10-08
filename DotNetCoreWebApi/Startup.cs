@@ -30,8 +30,8 @@ namespace DotNetCoreWebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddSingleton(typeof(IData<User>), typeof(UserDataRepo));
-            services.AddSingleton(typeof(IData<Product>), typeof(ProductDataRepo));
+            services.AddSingleton(typeof(IUserDataRepo), typeof(UserDataRepo));
+            services.AddSingleton(typeof(IProductDataRepo), typeof(ProductDataRepo));
 
         }
 
